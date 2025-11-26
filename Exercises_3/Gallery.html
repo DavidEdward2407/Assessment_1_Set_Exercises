@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+       
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0 40px 0;
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        nav a {
+            color: #000080; 
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 0; 
+        }
+
+        .text-content {
+            flex: 1; 
+            padding-bottom: 40px; 
+        }
+
+        .image-content {
+            flex: 1; 
+            min-height: 400px; 
+            overflow: hidden;
+            background-color: #f0f0f0; 
+        }
+
+        .image-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .gallery-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns (50% each) */
+            gap: 0; 
+            margin-bottom: 0; 
+        }
+
+        .media-item {
+            width: 100%;
+            height: 300px; /* Consistent height for all media items in the gallery */
+            background-color: #333; 
+            overflow: hidden;
+        }
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .main-content, .gallery-row {
+                flex-direction: column;
+                display: flex; 
+            }
+            .image-content, .media-item {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>J's Gallery</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Gallery</a>
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <div class="text-content">
+            <p>Lorem ipsum dolor amet, consectetuer adipiscing elit. Praesent mollis adipiscing per id libero libero. Tempus poettium netus molestie scelerisque facilisis tristique volutpat ultricies. Nostra ligula ac pulvinar rutrum non rhoncus mauris facilisi. Quisque maximus, commodo sollicitudin, montes congue imperdiet. Est malesuada vivamus vestibulum ante aenean class. Per integer apent ullamcorper sagittis posuere dignissim morbi scelerisque. Fringilla primis sagittis lorem erat integer, vulputate nullam. Porta purus habitant id fermentum nec ex, proin mauris sem.</p>
+            <p>Lectus ultrices nibh lobortis tempus facilisis sit conubia taciti. Non torquent amet nibh elit ante fermentum praesent cras. Et suspendisse egestas eros erat aptent sollicitudin. Nulla tortor purus posuere auctor himenaeos malesuada. </p>
+        </div>
+        <div class="image-content">
+            <img src="material/6.jpg" alt="Cow">
+        </div>
+    </div>
+    <p class="full-width">
+                Turpis phasellus enim venenatis aliquam pellentesque senectus,
+                id ultrices. Praesent tellus consequat phasellus cubilia mattis mauris natoque litora.
+                Fringilla cursus montes inceptos nec venenatis platea.
+            </p>
+    <div class="gallery-row">
+        <div class="media-item">
+            <video width="100%" height="100%" controls poster="" style="object-fit: cover;">
+                <source src="material/video.mp4" type="video/mp4"> 
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="media-item">
+            <img src="material/2.jpg" alt="street lights">
+        </div>
+    </div>
+
+    <div class="gallery-row">
+        <div class="media-item">
+            <img src="material/1.jpg" alt="camera">
+        </div>
+        <div class="media-item">
+            <img src="material/4.jpg" alt="snowy mountain">
+        </div>
+    </div>
+
+    <div class="gallery-row">
+        <div class="media-item">
+            <img src="material/5.jpg" alt="hills and landscape">
+        </div>
+        <div class="media-item">
+            <img src="material/3.jpg" alt="car">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
